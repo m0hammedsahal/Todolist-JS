@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  </head>
+  <body class="bg">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        vertical-align: baseline;
+        background: transparent;
+        font-weight: normal;
+        text-decoration: none;
+        outline: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      .rai {
+        background: linear-gradient(
+          to left,
+          violet,
+          indigo,
+          blue,
+          green,
+          yellow,
+          orange,
+          red
+        );
+        background-clip: text;
+        display: inline;
+        color: transparent;
+        animation: animated 5s linear infinite;
+      }
+      @keyframes animated {
+        to {
+          background-position-x: 161px;
+        }
+      }
+
+      .raibg {
+        background: linear-gradient(
+          to bottom right,
+          violet,
+          indigo,
+          blue,
+          green,
+          yellow,
+          orange,
+          red,
+          violet,
+          indigo,
+          blue,
+          green,
+          yellow,
+          orange,
+          red,
+          violet,
+          indigo,
+          blue,
+          green,
+          yellow,
+          orange,
+          red,
+          violet,
+          indigo,
+          blue,
+          green,
+          yellow,
+          orange,
+          red
+        );
+        /* background-size: 3000px 3000px; */
+        /* display: inline; */
+        /* color: transparent; */
+        animation: animated 5s linear infinite;
+      }
+
+      @keyframes animated {
+        to {
+          background-position: 3001px 3001px;
+        }
+      }
+      .bg{
+        /* background: linear-gradient( to bottom right,
+          violet,
+          indigo,
+          blue,
+        ); */
+        background: linear-gradient(to bottom right, black, violet, blue);
+        height: 100vh;
+        background-repeat: no-repeat;
+      }
+      .wrapper {
+        text-align: center;
+        padding-top: 30px;
+      }
+      .container {
+        margin: auto;
+        width: 30%;
+        text-align: center;
+        align-items: center;
+        padding-top: 10px;
+      }
+      i.trash {
+        font-size: 15px;
+        padding: 5px;
+        width: 25px;
+        border-radius: 50%;
+        background: white;
+        grid-column: span 1;
+      }
+      i.edit {
+        font-size: 15px;
+        padding: 5px;
+        width: 25px;
+        border-radius: 50%;
+        background: white;
+        grid-column: span 1;
+      }
+     
+      #kitchen-items-list li {
+        padding: 20px;
+        font-size: 19px;
+        font-weight: 700;
+        color: rgb(69, 13, 13);
+        background: linear-gradient(to bottom right, rgb(234, 0, 255), blue, green, yellow);
+        margin-bottom: 3px;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 10px;
+      }
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: rotateX(60deg) translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: rotateX(0deg) translateY(0px);
+        }
+      }
+
+      span {
+        grid-column: span 6;
+      }
+
+      .slideOut {
+        transform: rotateX(60deg) translateY(-10px);
+        opacity: 0;
+        transition: 0.2s;
+      }
+      .kitchen-header {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      #kitchen-input {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 50px;
+        background: linear-gradient(to right, red, rgb(22, 78, 219), rgb(11, 223, 202), rgb(166, 0, 255), rgb(234, 0, 255));
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-left: 1px solid rgb(234, 0, 255);
+        border-top: 1px solid rgb(234, 0, 255);
+        border-bottom: 1px solid rgb(234, 0, 255);
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      #add-btn {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 20px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background: linear-gradient(to right, rgb(234, 0, 255), white);
+        border-right: 1px solid rgb(234, 0, 255);
+        border-top: 1px solid rgb(234, 0, 255);
+        border-bottom: 1px solid rgb(234, 0, 255);
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .kitchen-title {
+        background: linear-gradient(
+          to left,
+          violet,
+          green,
+          red,
+          indigo
+        );
+        background-clip: text;
+        display: inline;
+        color: transparent;
+        /* animation: animated 5s linear infinite; */
+        font-size: 35px;
+        font-weight: 700;
+        margin: 0 auto;
+      }
+    </style>
+    <section class="wrapper">
+      <a class="kitchen-title " href="javascript.html">js</a>
+      <h2 class="kitchen-title">Our Application List</h2>
+      <div class="container">
+        <div class="kitchen-header" style="">
+          <input type="text" placeholder="Enter item" id="kitchen-input" />
+          <button type="submit" id="add-btn">Add now</button>
+        </div>
+        <ul id="kitchen-items-list"></ul>
+      </div>
+    </section>
+    <!-- <div class="flex" style="display: flex;">
+        <div class="left raibg" style="width: 50%; height: 700px;"></div>
+        <div class="right raibgtop" style="width: 50%; height: 700px;"></div>
+    </div> -->
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
