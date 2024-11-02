@@ -8,9 +8,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   </head>
-  <body class="bg">
+  <body class="bg min-h-screen max-h-full">
     <style>
       * {
         margin: 0;
@@ -105,7 +106,6 @@
           blue,
         ); */
         background: linear-gradient(to bottom right, black, violet, blue);
-        height: 100vh;
         background-repeat: no-repeat;
       }
       .wrapper {
@@ -114,7 +114,7 @@
       }
       .container {
         margin: auto;
-        width: 30%;
+        width: 80%;
         text-align: center;
         align-items: center;
         padding-top: 10px;
@@ -137,9 +137,11 @@
       }
      
       #kitchen-items-list li {
-        padding: 20px;
+        padding: 11px;
         font-size: 19px;
         font-weight: 700;
+        width: 100%; /* Set the desired width here */
+        overflow-wrap: break-word; /* Prevents text overflow */
         color: rgb(69, 13, 13);
         background: linear-gradient(to bottom right, rgb(234, 0, 255), blue, green, yellow);
         margin-bottom: 3px;
@@ -147,6 +149,7 @@
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         gap: 10px;
+        margin-bottom: 10px;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 50px;
         border-top-right-radius: 50px;
@@ -179,8 +182,8 @@
         margin-top: 20px;
       }
       #kitchen-input {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         padding-left: 20px;
         padding-right: 50px;
         background: linear-gradient(to right, red, rgb(22, 78, 219), rgb(11, 223, 202), rgb(166, 0, 255), rgb(234, 0, 255));
@@ -192,10 +195,11 @@
         color: white;
         font-size: 15px;
         font-weight: 600;
+        width: 65%;
       }
       #add-btn {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         padding-left: 10px;
         padding-right: 20px;
         border-top-right-radius: 10px;
@@ -205,6 +209,7 @@
         border-top: 1px solid rgb(234, 0, 255);
         border-bottom: 1px solid rgb(234, 0, 255);
         font-size: 15px;
+        width: 35%;
         font-weight: 600;
       }
       .kitchen-title {
